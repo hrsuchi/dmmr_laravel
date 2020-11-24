@@ -1,0 +1,12 @@
+@include("header")
+@include("loader")
+@if(isset($page))
+  @if(view()->exists($page))
+     @include($page)
+  @else
+     @include('404')
+  @endif
+@else
+  @include("home")
+@endif
+@include("footer")
